@@ -371,6 +371,13 @@ nav a{
         justify-content: center;
         flex-wrap: wrap;
     }
+    @media screen and (max-width:750px){
+
+    .cert-container{
+    grid-template-columns:1fr;
+    }
+
+}
 
     .sidebar{
         display: flex;
@@ -609,5 +616,58 @@ background-position:100% 50%;
 100%{
 background-position:0% 50%;
 }
+
+}
+#certification{
+margin-top:40px;
+animation: certFade 1s ease;
+}
+
+@keyframes certFade{
+
+0%{
+opacity:0;
+transform: translateY(40px);
+}
+
+100%{
+opacity:1;
+transform: translateY(0);
+}
+
+}
+
+.cert-card{
+background:#1e1e1e;
+border:1px solid #3a3a3a;
+border-radius:12px;
+padding:20px;
+position:relative;
+overflow:hidden;
+
+transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.cert-card h3{
+color:#e0e0e0;
+margin-bottom:10px;
+}
+
+.cert-card p{
+color:#a0a0a0;
+margin-bottom:10px;
+}
+
+.cert-card span{
+color:#FFBF00;
+font-size:0.9rem;
+}
+
+.cert-card:hover{
+
+transform:translateY(-10px) scale(1.03);
+
+box-shadow:
+0 0 10px rgba(255,191,0,0.4),
+0 0 20px rgba(255,191,0,0.2);
 
 }
